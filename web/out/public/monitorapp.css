@@ -26,21 +26,46 @@ body {
 }
 .container-narrow {
   margin: 0 auto;
-  max-width: 850px;
+  max-width: 950px;
 }
 .row-fluid {
   margin: 0 auto;
-  max-width: 850px;
+  max-width: 950px;
 }
 .mymargin_div {
   padding-right: 10px;
   padding-left: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
+  border: 2px solid #f00;
+  margin: 0 auto;
 }
 .mymargin_div:hover, .mymargin_div:focus {
-  padding: 6px;
-  line-height: 20px;
-  border: 2px dashed #b94a48;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 2px dashed;
+  margin: 0 auto;
+}
+.mycircle_focus_class {
+  width: 18px;
+  height: 18px;
+  border: 1px solid #b94a48;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  -moz-opacity: 1;
+  -webkit-opacity: 1;
+}
+.mycircle_out_class {
+  width: 18px;
+  height: 18px;
+  border: 2px solid transparent;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  -moz-opacity: 1;
+  -webkit-opacity: 1;
 }
 
