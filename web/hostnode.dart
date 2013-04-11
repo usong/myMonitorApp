@@ -1,7 +1,7 @@
 part of monitorapp;
 
 
-class Hostnode extends WebComponent {
+class Hostnode{// extends WebComponent {
   
   /*   host info parameter */
   String m_ip;
@@ -44,7 +44,9 @@ class Hostnode extends WebComponent {
     print("#thumbnail""$name");
     Element element = new Element.html("<div class='thumbnail' id='thumbnail$name'>"
         "<div class='imgclass' id='closeicon$name'>"       
-        "<div class='mycircle_out_class' id='mycircle$name'></div>"
+        "<div class='mycircle_out_class' id='mycircle$name'>"
+        "<img id='imgclose$m_ip' src='../public/img/del.png' style='display:none ;width: 18px; height: 18px'></img>"
+        "</div>"
         "</div>"        
         "<img src='../public/img/add.png' style='width: 180px; height: 180px'>"
         "<div class='caption'>$m_ip</div></div>");
@@ -57,18 +59,20 @@ class Hostnode extends WebComponent {
   void ShowIcon(Event e){  
     if(!m_mouseover){
       m_mouseover = true;     
-      query("#mycircle$m_ip").remove();
-      var element = new Element.html("<img id='imgclose$m_ip' src='../public/img/del.png' style='width: 18px; height: 18px'></img>");
-      query("#closeicon$m_ip").children.add(element);
+      //query("#mycircle$m_ip").remove();
+      //var element = new Element.html("<img id='imgclose$m_ip' src='../public/img/del.png' style='border: 2px;width: 18px; height: 18px'></img>");
+      //query("#closeicon$m_ip").children.add(element);
+      query("#imgclose$m_ip").attributes['style']='display:block ;width: 18px; height: 18px';
       query("#imgclose$m_ip").onClick.listen(delete_node);
     }
   }
   void HiddenIcon(Event e){  
     if(m_mouseover){      
       m_mouseover = false;
-      query("#imgclose$m_ip").remove();
-      var element = new Element.html("<div class='mycircle_out_class' id='mycircle$m_ip'></div>");
-      query("#closeicon$m_ip").children.add(element);
+      //query("#imgclose$m_ip").remove();
+      //var element = new Element.html("<div class='mycircle_out_class' id='mycircle$m_ip'></div>");
+      //query("#closeicon$m_ip").children.add(element);
+      query("#imgclose$m_ip").attributes['style']='display:none ;width: 18px; height: 18px';
     }    
   }
   

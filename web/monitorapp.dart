@@ -1,8 +1,8 @@
 library monitorapp;
 import 'dart:html';
 import 'dart:math';
-import 'package:web_ui/web_ui.dart';
 part 'hostnode.dart';
+
 
 void main() { 
   generate_addview(); /* addview node */

@@ -36,9 +36,6 @@ $$.ListIterable = {"": "Iterable;",
         throw $.$$throw($.ConcurrentModificationError$(this));
     }
   },
-  where$1: function(_, test) {
-    return $.Iterable.prototype.where$1.call(this, this, test);
-  },
   map$1: function(_, f) {
     return $.MappedListIterable$(this, f);
   },
@@ -120,15 +117,15 @@ $$.MappedIterator = {"": "Iterator;_liblib$_current,_iterator,_f",
   }
 };
 
-$$.MappedListIterable = {"": "ListIterable;_liblib$_source,_f",
+$$.MappedListIterable = {"": "ListIterable;_source,_f",
   _f$1: function(arg0) {
     return this._f.call$1(arg0);
   },
   get$length: function(_) {
-    return $.get$length$asx(this._liblib$_source);
+    return $.get$length$asx(this._source);
   },
   elementAt$1: function(_, index) {
-    return this._f$1($.elementAt$1$ax(this._liblib$_source, index));
+    return this._f$1($.elementAt$1$ax(this._source, index));
   }
 };
 
@@ -2035,9 +2032,6 @@ $$._FutureWrapper = {"": "Object;_future",
 };
 
 $$.Stream = {"": "Object;",
-  where$1: function(_, test) {
-    return $._WhereStream$(this, test);
-  },
   map$1: function(_, convert) {
     return $._MapStream$(this, convert);
   },
@@ -2100,9 +2094,6 @@ $$._ForwardingStream = {"": "Stream;",
     if (onDone == null)
       onDone = $._nullDoneHandler;
     return this._createSubscription$4(onData, onError, onDone, true === unsubscribeOnError);
-  },
-  listen$1: function(onData) {
-    return this.listen$4$onDone$onError$unsubscribeOnError(onData, null, null, null);
   },
   listen$3$onDone$onError: function(onData, onDone, onError) {
     return this.listen$4$onDone$onError$unsubscribeOnError(onData, onDone, onError, null);
@@ -2188,33 +2179,11 @@ $$._ForwardingStreamSubscription = {"": "_BaseStreamSubscription;_stream,_unsubs
     var t1, t2;
     t1 = this.get$_handleData();
     t2 = this.get$_handleError();
-    this._subscription = this._stream._source.listen$3$onDone$onError(t1, this.get$_handleDone(), t2);
+    this._subscription = this._stream._liblib0$_source.listen$3$onDone$onError(t1, this.get$_handleDone(), t2);
   }
 };
 
-$$._WhereStream = {"": "_ForwardingStream;_test,_source",
-  _test$1: function(arg0) {
-    return this._test.call$1(arg0);
-  },
-  _handleData$2: function(inputEvent, sink) {
-    var satisfies, e, s, exception, t1;
-    satisfies = null;
-    try {
-      satisfies = this._test$1(inputEvent);
-    } catch (exception) {
-      t1 = $.unwrapException(exception);
-      e = t1;
-      s = $.getTraceFromException(exception);
-      sink._sendError$1($._asyncError(e, s, null));
-      return;
-    }
-
-    if (satisfies === true)
-      sink._sendData$1(inputEvent);
-  }
-};
-
-$$._MapStream = {"": "_ForwardingStream;_transform,_source",
+$$._MapStream = {"": "_ForwardingStream;_transform,_liblib0$_source",
   _transform$1: function(arg0) {
     return this._transform.call$1(arg0);
   },
@@ -3758,9 +3727,6 @@ $$.Iterable = {"": "Object;",
   map$1: function(_, f) {
     return $.MappedIterable$(this, f);
   },
-  where$1: function(_, f) {
-    return $.WhereIterable$(this, f);
-  },
   forEach$1: function(_, f) {
     var t1;
     for (t1 = this.get$iterator(this); t1.moveNext$0();)
@@ -4023,7 +3989,7 @@ $$._FrozenElementListIterator = {"": "Object;_list,_liblib2$_index,_current",
 
 $$._ElementFactoryProvider__getColgroup_anon = {"": "Closure;",
   call$1: function(n) {
-    return $.$eq($.get$tagName$x(n), "COLGROUP");
+    return $.get$tagName$x(n) === "COLGROUP";
   }
 };
 
@@ -4471,7 +4437,7 @@ $$.FilteredElementList__filtered_anon = {"": "Closure;",
   }
 };
 
-$$.Hostnode = {"": "WebComponent;m_ip,m_mouseover,m_closeicon,_host,_shadowRoots",
+$$.Hostnode = {"": "Object;m_ip,m_mouseover,m_closeicon",
   delete_node$1: function(e) {
     var t1;
     $.remove$1$ax($.get$Hostnode__cache(), this.m_ip);
@@ -4487,11 +4453,13 @@ $$.Hostnode = {"": "WebComponent;m_ip,m_mouseover,m_closeicon,_host,_shadowRoots
     var lielement, t1, t2;
     lielement = $._ElementFactoryProvider_createElement_tag("li");
     t1 = $.getInterceptor$x(lielement);
-    $.$indexSet$ax(t1.get$attributes(lielement), "class", "span3");
-    $.$indexSet$ax(t1.get$attributes(lielement), "id", "li" + $name);
+    t2 = t1.get$attributes(lielement);
+    t2.$indexSet(t2, "class", "span3");
+    t2 = t1.get$attributes(lielement);
+    t2.$indexSet(t2, "id", "li" + $name);
     this.m_ip = $name;
     $.Primitives_printString("#thumbnail" + $name);
-    t1.insertAdjacentElement$2(lielement, "afterBegin", $._ElementFactoryProvider_createElement_html("<div class='thumbnail' id='thumbnail" + $name + "'>" + "<div class='imgclass' id='closeicon" + $name + "'>" + "<div class='mycircle_out_class' id='mycircle" + $name + "'></div>" + "</div>" + "<img src='../public/img/add.png' style='width: 180px; height: 180px'>" + "<div class='caption'>" + this.m_ip + "</div></div>"));
+    t1.insertAdjacentElement$2(lielement, "afterBegin", $._ElementFactoryProvider_createElement_html("<div class='thumbnail' id='thumbnail" + $name + "'>" + "<div class='imgclass' id='closeicon" + $name + "'>" + "<div class='mycircle_out_class' id='mycircle" + $name + "'>" + "<img id='imgclose" + this.m_ip + "' src='../public/img/del.png' style='display:none ;width: 18px; height: 18px'></img>" + "</div>" + "</div>" + "<img src='../public/img/add.png' style='width: 180px; height: 180px'>" + "<div class='caption'>" + this.m_ip + "</div></div>"));
     $.insertAdjacentElement$2$x($parent, "afterBegin", lielement);
     t1 = "#thumbnail" + $name;
     $.get$onMouseOver$x($.query$1$x(document, t1)).listen$1(this.get$ShowIcon());
@@ -4499,30 +4467,26 @@ $$.Hostnode = {"": "WebComponent;m_ip,m_mouseover,m_closeicon,_host,_shadowRoots
     $.get$onMouseOut$x($.query$1$x(document, t2)).listen$1(this.get$HiddenIcon());
   },
   ShowIcon$1: function(e) {
-    var t1, element, t2, t3;
+    var t1, t2;
     if (!this.m_mouseover) {
       this.m_mouseover = true;
-      t1 = "#mycircle" + this.m_ip;
-      $.remove$0$ax($.query$1$x(document, t1));
-      element = $._ElementFactoryProvider_createElement_html("<img id='imgclose" + this.m_ip + "' src='../public/img/del.png' style='width: 18px; height: 18px'></img>");
-      t2 = "#closeicon" + this.m_ip;
-      $.add$1$ax($.get$children$x($.query$1$x(document, t2)), element);
-      t3 = "#imgclose" + this.m_ip;
-      $.get$onClick$x($.query$1$x(document, t3)).listen$1(this.get$delete_node());
+      t1 = "#imgclose" + this.m_ip;
+      t2 = $.get$attributes$x($.query$1$x(document, t1));
+      t2.$indexSet(t2, "style", "display:block ;width: 18px; height: 18px");
+      t2 = "#imgclose" + this.m_ip;
+      $.get$onClick$x($.query$1$x(document, t2)).listen$1(this.get$delete_node());
     }
   },
   get$ShowIcon: function() {
     return new $.BoundClosure$1(this, "ShowIcon$1");
   },
   HiddenIcon$1: function(e) {
-    var t1, element, t2;
+    var t1, t2;
     if (this.m_mouseover) {
       this.m_mouseover = false;
       t1 = "#imgclose" + this.m_ip;
-      $.remove$0$ax($.query$1$x(document, t1));
-      element = $._ElementFactoryProvider_createElement_html("<div class='mycircle_out_class' id='mycircle" + this.m_ip + "'></div>");
-      t2 = "#closeicon" + this.m_ip;
-      $.add$1$ax($.get$children$x($.query$1$x(document, t2)), element);
+      t2 = $.get$attributes$x($.query$1$x(document, t1));
+      t2.$indexSet(t2, "style", "display:none ;width: 18px; height: 18px");
     }
   },
   get$HiddenIcon: function() {
@@ -4566,69 +4530,6 @@ $$.Template = {"": "TemplateItem;node,children>,nodes>",
       $.remove$0$ax(t1[i]);
     }
     $.JSArray_methods.clear$0(t1);
-  }
-};
-
-$$.WebComponent = {"": "Object;",
-  get$host: function(_) {
-    var t1 = this._host;
-    if (t1 == null)
-      throw $.$$throw($.StateError$("host element has not been set."));
-    return t1;
-  },
-  get$nodes: function(_) {
-    return $.get$nodes$x(this.get$host(this));
-  },
-  replaceWith$1: function(_, otherNode) {
-    $.replaceWith$1$x(this.get$host(this), otherNode);
-  },
-  remove$0: function(_) {
-    return $.remove$0$ax(this.get$host(this));
-  },
-  insertBefore$2: function(_, newChild, refChild) {
-    return $.insertBefore$2$x(this.get$host(this), newChild, refChild);
-  },
-  get$attributes: function(_) {
-    return $.get$attributes$x(this.get$host(this));
-  },
-  get$children: function(_) {
-    return $.get$children$x(this.get$host(this));
-  },
-  get$id: function(_) {
-    return $.get$id$x(this.get$host(this));
-  },
-  set$innerHtml: function(_, v) {
-    $.set$innerHtml$x(this.get$host(this), v);
-  },
-  insertAdjacentElement$2: function(_, where, element) {
-    return $.insertAdjacentElement$2$x(this.get$host(this), where, element);
-  },
-  get$tagName: function(_) {
-    return $.get$tagName$x(this.get$host(this));
-  },
-  $$dom_removeChild$1: function(_, oldChild) {
-    return $.$$dom_removeChild$1$x(this.get$host(this), oldChild);
-  },
-  $$dom_replaceChild$2: function(_, newChild, oldChild) {
-    return $.$$dom_replaceChild$2$x(this.get$host(this), newChild, oldChild);
-  },
-  get$onClick: function(_) {
-    return $.get$onClick$x(this.get$host(this));
-  },
-  get$onMouseDown: function(_) {
-    return $.get$onMouseDown$x(this.get$host(this));
-  },
-  get$onMouseOut: function(_) {
-    return $.get$onMouseOut$x(this.get$host(this));
-  },
-  get$onMouseOver: function(_) {
-    return $.get$onMouseOver$x(this.get$host(this));
-  },
-  $isElement: function() {
-    return true;
-  },
-  $asElement: function() {
-    return null;
   }
 };
 
@@ -5700,10 +5601,6 @@ $._ForwardingStreamSubscription$ = function(_stream, onData, onError, onDone, _u
   return t1;
 };
 
-$._WhereStream$ = function(source, test) {
-  return new $._WhereStream(test, source);
-};
-
 $._MapStream$ = function(source, transform) {
   return new $._MapStream(transform, source);
 };
@@ -5948,9 +5845,9 @@ $._ElementFactoryProvider_createElement_html = function(html) {
   match = $.get$_START_TAG_REGEXP().firstMatch$1(html);
   if (match != null) {
     tag = $.toLowerCase$0$s(match.group$1(1));
-    if ($.Device_isIE() === true && $.CONSTANT8.containsKey$1(tag))
+    if ($.Device_isIE() === true && $.CONSTANT10.containsKey$1(tag))
       return $._ElementFactoryProvider__createTableForIE(html, tag);
-    parentTag = $.CONSTANT9.$index($.CONSTANT9, tag);
+    parentTag = $.CONSTANT11.$index($.CONSTANT11, tag);
     if (parentTag == null)
       parentTag = "div";
   } else {
@@ -6012,7 +5909,8 @@ $._ElementFactoryProvider__createTableForIE = function(html, tag) {
 };
 
 $._ElementFactoryProvider__getColgroup = function(table) {
-  return $._ElementFactoryProvider__singleNode($.toList$0$ax($.where$1$ax($.get$children$x(table), new $._ElementFactoryProvider__getColgroup_anon())));
+  var t1 = $.where$1$ax($.get$children$x(table), new $._ElementFactoryProvider__getColgroup_anon());
+  return $._ElementFactoryProvider__singleNode(t1.toList$0(t1));
 };
 
 $._ElementFactoryProvider__singleNode = function(list) {
@@ -6137,7 +6035,7 @@ $.Hostnode_Hostnode = function(ipstr) {
 };
 
 $.Hostnode$_internal = function(m_ip) {
-  return new $.Hostnode(m_ip, false, null, null, null);
+  return new $.Hostnode(m_ip, false, null);
 };
 
 $.generate_addview = function() {
@@ -6216,21 +6114,21 @@ Isolate.makeConstantList = function(list) {
   return list;
 };
 $.CONSTANT5 = Isolate.makeConstantList([]);
-$.CONSTANT14 = Isolate.makeConstantList(["caption", "col", "colgroup", "tbody", "td", "tfoot", "th", "thead", "tr"]);
-$.CONSTANT8 = new $.ConstantMap(9, {caption: null, col: null, colgroup: null, tbody: null, td: null, tfoot: null, th: null, thead: null, tr: null}, $.CONSTANT14);
+$.CONSTANT8 = new $.EventStreamProvider("click");
 $.CONSTANT = new $.NullThrownError();
-$.CONSTANT15 = Isolate.makeConstantList(["body", "head", "caption", "td", "th", "colgroup", "col", "tr", "tbody", "tfoot", "thead", "track"]);
-$.CONSTANT13 = new $.Object();
+$.CONSTANT14 = Isolate.makeConstantList(["body", "head", "caption", "td", "th", "colgroup", "col", "tr", "tbody", "tfoot", "thead", "track"]);
+$.CONSTANT15 = Isolate.makeConstantList(["caption", "col", "colgroup", "tbody", "td", "tfoot", "th", "thead", "tr"]);
+$.CONSTANT10 = new $.ConstantMap(9, {caption: null, col: null, colgroup: null, tbody: null, td: null, tfoot: null, th: null, thead: null, tr: null}, $.CONSTANT15);
 $.CONSTANT2 = new $._NullKey();
-$.CONSTANT4 = new $.EventStreamProvider("mousedown");
-$.CONSTANT12 = new $.EventStreamProvider("mouseover");
+$.CONSTANT9 = new $.EventStreamProvider("mouseover");
+$.CONSTANT12 = new $.EventStreamProvider("mousedown");
 $.CONSTANT3 = new $._LinkedHashTableHeadMarker();
-$.JSNull_methods = $.JSNull.prototype;
+$.CONSTANT4 = new $.EventStreamProvider("mouseout");
 $.JSNumber_methods = $.JSNumber.prototype;
+$.JSNull_methods = $.JSNull.prototype;
 $.JSString_methods = $.JSString.prototype;
-$.CONSTANT9 = new $.ConstantMap(12, {body: "html", head: "html", caption: "table", td: "tr", th: "tr", colgroup: "table", col: "colgroup", tr: "tbody", tbody: "table", tfoot: "table", thead: "table", track: "audio"}, $.CONSTANT15);
-$.CONSTANT11 = new $.EventStreamProvider("click");
-$.CONSTANT10 = new $.EventStreamProvider("mouseout");
+$.CONSTANT13 = new $.Object();
+$.CONSTANT11 = new $.ConstantMap(12, {body: "html", head: "html", caption: "table", td: "tr", th: "tr", colgroup: "table", col: "colgroup", tr: "tbody", tbody: "table", tfoot: "table", thead: "table", track: "audio"}, $.CONSTANT14);
 $.CONSTANT7 = new $.CloseToken();
 $.JSInt_methods = $.JSInt.prototype;
 $.JSArray_methods = $.JSArray.prototype;
@@ -6444,9 +6342,6 @@ $.removeLast$0$ax = function(receiver) {
 $.replaceWith$1$x = function(receiver, a0) {
   return $.getInterceptor$x(receiver).replaceWith$1(receiver, a0);
 };
-$.set$innerHtml$x = function(receiver, value) {
-  return $.getInterceptor$x(receiver).set$innerHtml(receiver, value);
-};
 $.sublist$1$ax = function(receiver, a0) {
   return $.getInterceptor$ax(receiver).sublist$1(receiver, a0);
 };
@@ -6643,18 +6538,6 @@ $.$defineNativeClass("CSSStyleDeclaration", {"": "length="});
 $.$defineNativeClass("Document", {"": "$$dom_body:body=",
   query$1: function(receiver, selectors) {
     return receiver.querySelector(selectors);
-  },
-  get$onClick: function(receiver) {
-    return $.CONSTANT11.forTarget$1(receiver);
-  },
-  get$onMouseDown: function(receiver) {
-    return $.CONSTANT4.forTarget$1(receiver);
-  },
-  get$onMouseOut: function(receiver) {
-    return $.CONSTANT10.forTarget$1(receiver);
-  },
-  get$onMouseOver: function(receiver) {
-    return $.CONSTANT12.forTarget$1(receiver);
   }
 });
 
@@ -6747,16 +6630,16 @@ $.$defineNativeClass("Element", {"": "$$dom_children:children=,id=,innerHtml:inn
     return receiver.setAttribute($name,value);
   },
   get$onClick: function(receiver) {
-    return $.CONSTANT11.forTarget$1(receiver);
+    return $.CONSTANT8.forTarget$1(receiver);
   },
   get$onMouseDown: function(receiver) {
-    return $.CONSTANT4.forTarget$1(receiver);
+    return $.CONSTANT12.forTarget$1(receiver);
   },
   get$onMouseOut: function(receiver) {
-    return $.CONSTANT10.forTarget$1(receiver);
+    return $.CONSTANT4.forTarget$1(receiver);
   },
   get$onMouseOver: function(receiver) {
-    return $.CONSTANT12.forTarget$1(receiver);
+    return $.CONSTANT9.forTarget$1(receiver);
   },
   $isElement: function() {
     return true;
@@ -7246,18 +7129,6 @@ $.$defineNativeClass("DOMWindow", {"": "navigator=",
   },
   $$dom_removeEventListener$3: function(receiver, type, listener, useCapture) {
     return receiver.removeEventListener(type,$.convertDartClosureToJS(listener, 1),useCapture);
-  },
-  get$onClick: function(receiver) {
-    return $.CONSTANT11.forTarget$1(receiver);
-  },
-  get$onMouseDown: function(receiver) {
-    return $.CONSTANT4.forTarget$1(receiver);
-  },
-  get$onMouseOut: function(receiver) {
-    return $.CONSTANT10.forTarget$1(receiver);
-  },
-  get$onMouseOver: function(receiver) {
-    return $.CONSTANT12.forTarget$1(receiver);
   }
 });
 

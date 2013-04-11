@@ -647,3 +647,302 @@ build.dart --machine --changed=web/out/monitorapp.dart --changed=web/out/monitor
 Total time                                                   --  33 ms
 build.dart finished [539 ms]
 
+---
+build.dart --machine --changed=web/out/monitorapp.html_bootstrap.dart.js --changed=web/out/monitorapp.html_boot...
+Total time                                                   --  22 ms
+build.dart finished [538 ms]
+
+---
+build.dart --machine --removed=web/out/hostview.dart --removed=web/out/hostview.dart.map --removed=web/out/host...
+Total time                                                   --  25 ms
+build.dart finished [510 ms]
+
+---
+build.dart --machine --removed=web/out/monitorapp.css
+Total time                                                   --  21 ms
+build.dart finished [409 ms]
+
+---
+build.dart --machine --changed=web/out/monitorapp.html
+Total time                                                   --  28 ms
+build.dart finished [517 ms]
+
+---
+build.dart --machine --changed=web/out/monitorapp.html_bootstrap副本.dart
+Dart_NewStringFromUTF8 expects argument 'str' to be valid UTF-8.
+build.dart finished [470 ms]
+
+---
+build.dart --machine --removed=web/out/xclickcounter.dart --removed=web/out/xclickcounter.dart.map
+Total time                                                   --  28 ms
+build.dart finished [536 ms]
+
+---
+build.dart --machine --removed=web/out/monitorapp.html_bootstrap副本.dart
+Dart_NewStringFromUTF8 expects argument 'str' to be valid UTF-8.
+build.dart finished [457 ms]
+
+---
+build.dart --machine --removed=web/out/monitorapp.dart --removed=web/out/monitorapp.dart.map --removed=web/out/...
+Total time                                                   --  22 ms
+build.dart finished [420 ms]
+
+---
+build.dart --machine --changed=web/monitorapp.dart.js --changed=web/monitorapp.dart.js.deps --changed=web/monit...
+Total time                                                   --  23 ms
+build.dart finished [499 ms]
+
+---
+build.dart --machine --changed=web/monitorapp.html
+[{"method":"mapping","params":{"from":"web/monitorapp.html","to":"web/out/monitorapp.html"}}]
+[{"method":"warning","params":{"file":null,"message":"expected }, but found *","line":12,"charStart":248,"charEnd":249}}]
+[{"method":"warning","params":{"file":null,"message":"parsing error expected {","line":12,"charStart":255,"charEnd":256}}]
+[{"method":"warning","params":{"file":null,"message":"expected }, but found *","line":60,"charStart":841,"charEnd":842}}]
+[{"method":"warning","params":{"file":null,"message":"expected {, but found ;","line":60,"charStart":857,"charEnd":858}}]
+[{"method":"warning","params":{"file":null,"message":"expected }, but found *","line":61,"charStart":861,"charEnd":862}}]
+[{"method":"warning","params":{"file":null,"message":"parsing error expected {","line":61,"charStart":868,"charEnd":869}}]
+[{"method":"warning","params":{"file":null,"message":"parsing error expected }","line":102,"charStart":1335,"charEnd":1336}}]
+[{"method":"warning","params":{"file":null,"message":"premature end of file unknown CSS","line":102,"charStart":1336,"charEnd":1337}}]
+[{"method":"warning","params":{"file":null,"message":"expected }, but found *","line":12,"charStart":259,"charEnd":260}}]
+[{"method":"warning","params":{"file":null,"message":"parsing error expected {","line":12,"charStart":266,"charEnd":267}}]
+[{"method":"warning","params":{"file":null,"message":"premature end of file unknown CSS","line":43,"charStart":711,"charEnd":712}}]
+Total time spent on web/monitorapp.html                      -- 392 ms
+Total time                                                   -- 426 ms
+build.dart finished [912 ms]
+
+---
+build.dart --machine --changed=web/out/monitorapp.dart --changed=web/out/monitorapp.dart.map --changed=web/out/...
+Total time                                                   --  34 ms
+build.dart finished [581 ms]
+
+---
+build.dart --machine --changed=web/hostnode.dart
+[{"method":"mapping","params":{"from":"web/monitorapp.html","to":"web/out/monitorapp.html"}}]
+[{"method":"warning","params":{"file":null,"message":"expected }, but found *","line":12,"charStart":248,"charEnd":249}}]
+[{"method":"warning","params":{"file":null,"message":"parsing error expected {","line":12,"charStart":255,"charEnd":256}}]
+[{"method":"warning","params":{"file":null,"message":"expected }, but found *","line":60,"charStart":841,"charEnd":842}}]
+[{"method":"warning","params":{"file":null,"message":"expected {, but found ;","line":60,"charStart":857,"charEnd":858}}]
+[{"method":"warning","params":{"file":null,"message":"expected }, but found *","line":61,"charStart":861,"charEnd":862}}]
+[{"method":"warning","params":{"file":null,"message":"parsing error expected {","line":61,"charStart":868,"charEnd":869}}]
+[{"method":"warning","params":{"file":null,"message":"parsing error expected }","line":102,"charStart":1335,"charEnd":1336}}]
+[{"method":"warning","params":{"file":null,"message":"premature end of file unknown CSS","line":102,"charStart":1336,"charEnd":1337}}]
+[{"method":"warning","params":{"file":null,"message":"expected }, but found *","line":12,"charStart":259,"charEnd":260}}]
+[{"method":"warning","params":{"file":null,"message":"parsing error expected {","line":12,"charStart":266,"charEnd":267}}]
+[{"method":"warning","params":{"file":null,"message":"premature end of file unknown CSS","line":43,"charStart":711,"charEnd":712}}]
+Total time spent on web/monitorapp.html                      -- 391 ms
+Total time                                                   -- 419 ms
+build.dart finished [964 ms]
+
+---
+build.dart --machine --changed=web/out/monitorapp.dart --changed=web/out/monitorapp.dart.map --changed=web/out/...
+Total time                                                   --  70 ms
+build.dart finished [552 ms]
+
+---
+build.dart --machine --changed=web/out/monitorapp.html_bootstrap.dart.js --changed=web/out/monitorapp.html_boot...
+Total time                                                   --  24 ms
+build.dart finished [495 ms]
+
+---
+build.dart --machine --changed=web/out/monitorapp.dart --changed=web/out/monitorapp.dart.map --changed=web/out/...
+Total time                                                   --  31 ms
+build.dart finished [542 ms]
+
+---
+build.dart --machine --removed=web/out/monitorapp.dart --removed=web/out/monitorapp.dart.map --removed=web/out/...
+Total time                                                   --  26 ms
+build.dart finished [483 ms]
+
+---
+build.dart --machine --removed=web/monitorapp.dart.js
+Total time                                                   --  23 ms
+build.dart finished [439 ms]
+
+---
+build.dart --machine --removed=web/monitorapp.dart.js.deps --removed=web/monitorapp.dart.js.map
+Total time                                                   --  23 ms
+build.dart finished [426 ms]
+
+---
+build.dart --machine --changed=web/monitorapp.dart
+[{"method":"mapping","params":{"from":"web/monitorapp.html","to":"web/out/monitorapp.html"}}]
+[{"method":"warning","params":{"file":null,"message":"expected }, but found *","line":12,"charStart":248,"charEnd":249}}]
+[{"method":"warning","params":{"file":null,"message":"parsing error expected {","line":12,"charStart":255,"charEnd":256}}]
+[{"method":"warning","params":{"file":null,"message":"expected }, but found *","line":60,"charStart":841,"charEnd":842}}]
+[{"method":"warning","params":{"file":null,"message":"expected {, but found ;","line":60,"charStart":857,"charEnd":858}}]
+[{"method":"warning","params":{"file":null,"message":"expected }, but found *","line":61,"charStart":861,"charEnd":862}}]
+[{"method":"warning","params":{"file":null,"message":"parsing error expected {","line":61,"charStart":868,"charEnd":869}}]
+[{"method":"warning","params":{"file":null,"message":"parsing error expected }","line":102,"charStart":1335,"charEnd":1336}}]
+[{"method":"warning","params":{"file":null,"message":"premature end of file unknown CSS","line":102,"charStart":1336,"charEnd":1337}}]
+[{"method":"warning","params":{"file":null,"message":"expected }, but found *","line":12,"charStart":259,"charEnd":260}}]
+[{"method":"warning","params":{"file":null,"message":"parsing error expected {","line":12,"charStart":266,"charEnd":267}}]
+[{"method":"warning","params":{"file":null,"message":"premature end of file unknown CSS","line":43,"charStart":711,"charEnd":712}}]
+Total time spent on web/monitorapp.html                      -- 370 ms
+Total time                                                   -- 395 ms
+build.dart finished [798 ms]
+
+---
+build.dart --machine --changed=web/out/monitorapp.dart --changed=web/out/monitorapp.dart.map --changed=web/out/...
+Total time                                                   --  31 ms
+build.dart finished [526 ms]
+
+---
+build.dart --machine --changed=web/out/monitorapp.html_bootstrap.dart.js --changed=web/out/monitorapp.html_boot...
+Total time                                                   --  25 ms
+build.dart finished [483 ms]
+
+---
+build.dart --machine --changed=web/out/monitorapp.dart --changed=web/out/monitorapp.dart.map --changed=web/out/...
+Total time                                                   --  24 ms
+build.dart finished [501 ms]
+
+---
+build.dart --machine --removed=web/out/monitorapp.dart --removed=web/out/monitorapp.dart.map --removed=web/out/...
+Total time                                                   --  24 ms
+build.dart finished [426 ms]
+
+---
+build.dart --machine --changed=web/public/monitorapp.css
+Total time                                                   --  21 ms
+build.dart finished [412 ms]
+
+---
+build.dart --machine --changed=web/public/bootstrap/css/bootstrap-responsive.css
+Total time                                                   --  23 ms
+build.dart finished [416 ms]
+
+---
+build.dart --machine --changed=web/public/bootstrap/css/bootstrap.css
+Total time                                                   --  22 ms
+build.dart finished [414 ms]
+
+---
+build.dart --machine --changed=web/hostnode.dart
+[{"method":"mapping","params":{"from":"web/monitorapp.html","to":"web/out/monitorapp.html"}}]
+[{"method":"warning","params":{"file":null,"message":"expected }, but found *","line":12,"charStart":248,"charEnd":249}}]
+[{"method":"warning","params":{"file":null,"message":"parsing error expected {","line":12,"charStart":255,"charEnd":256}}]
+[{"method":"warning","params":{"file":null,"message":"expected }, but found *","line":60,"charStart":841,"charEnd":842}}]
+[{"method":"warning","params":{"file":null,"message":"expected {, but found ;","line":60,"charStart":857,"charEnd":858}}]
+[{"method":"warning","params":{"file":null,"message":"expected }, but found *","line":61,"charStart":861,"charEnd":862}}]
+[{"method":"warning","params":{"file":null,"message":"parsing error expected {","line":61,"charStart":868,"charEnd":869}}]
+[{"method":"warning","params":{"file":null,"message":"parsing error expected }","line":102,"charStart":1335,"charEnd":1336}}]
+[{"method":"warning","params":{"file":null,"message":"premature end of file unknown CSS","line":102,"charStart":1336,"charEnd":1337}}]
+[{"method":"warning","params":{"file":null,"message":"expected }, but found *","line":12,"charStart":259,"charEnd":260}}]
+[{"method":"warning","params":{"file":null,"message":"parsing error expected {","line":12,"charStart":266,"charEnd":267}}]
+[{"method":"warning","params":{"file":null,"message":"premature end of file unknown CSS","line":43,"charStart":711,"charEnd":712}}]
+Total time spent on web/monitorapp.html                      -- 370 ms
+Total time                                                   -- 394 ms
+build.dart finished [782 ms]
+
+---
+build.dart --machine --changed=web/out/monitorapp.dart --changed=web/out/monitorapp.dart.map --changed=web/out/...
+Total time                                                   --  32 ms
+build.dart finished [566 ms]
+
+---
+build.dart --machine --changed=web/monitorapp.dart
+[{"method":"mapping","params":{"from":"web/monitorapp.html","to":"web/out/monitorapp.html"}}]
+[{"method":"warning","params":{"file":null,"message":"expected }, but found *","line":12,"charStart":248,"charEnd":249}}]
+[{"method":"warning","params":{"file":null,"message":"parsing error expected {","line":12,"charStart":255,"charEnd":256}}]
+[{"method":"warning","params":{"file":null,"message":"expected }, but found *","line":60,"charStart":841,"charEnd":842}}]
+[{"method":"warning","params":{"file":null,"message":"expected {, but found ;","line":60,"charStart":857,"charEnd":858}}]
+[{"method":"warning","params":{"file":null,"message":"expected }, but found *","line":61,"charStart":861,"charEnd":862}}]
+[{"method":"warning","params":{"file":null,"message":"parsing error expected {","line":61,"charStart":868,"charEnd":869}}]
+[{"method":"warning","params":{"file":null,"message":"parsing error expected }","line":102,"charStart":1335,"charEnd":1336}}]
+[{"method":"warning","params":{"file":null,"message":"premature end of file unknown CSS","line":102,"charStart":1336,"charEnd":1337}}]
+[{"method":"warning","params":{"file":null,"message":"expected }, but found *","line":12,"charStart":259,"charEnd":260}}]
+[{"method":"warning","params":{"file":null,"message":"parsing error expected {","line":12,"charStart":266,"charEnd":267}}]
+[{"method":"warning","params":{"file":null,"message":"premature end of file unknown CSS","line":43,"charStart":711,"charEnd":712}}]
+Total time spent on web/monitorapp.html                      -- 366 ms
+Total time                                                   -- 391 ms
+build.dart finished [793 ms]
+
+---
+build.dart --machine --changed=web/out/monitorapp.dart --changed=web/out/monitorapp.dart.map --changed=web/out/...
+Total time                                                   --  29 ms
+build.dart finished [571 ms]
+
+---
+build.dart --machine --changed=web/monitorapp.html
+[{"method":"mapping","params":{"from":"web/monitorapp.html","to":"web/out/monitorapp.html"}}]
+[{"method":"error","params":{"file":"web/monitorapp.html","message":"The file Instance of 'UrlInfo' cannot be processed. All processed files must be under the base folder (web), you can specify the base folder using the --basedir flag.","line":10,"charStart":295,"charEnd":350}}]
+[{"method":"error","params":{"file":"web/monitorapp.html","message":"The file Instance of 'UrlInfo' cannot be processed. All processed files must be under the base folder (web), you can specify the base folder using the --basedir flag.","line":11,"charStart":355,"charEnd":423}}]
+[{"method":"error","params":{"file":"web/monitorapp.html","message":"The file Instance of 'UrlInfo' cannot be processed. All processed files must be under the base folder (web), you can specify the base folder using the --basedir flag.","line":12,"charStart":428,"charEnd":507}}]
+Total time spent on web/monitorapp.html                      -- 266 ms
+Total time                                                   -- 302 ms
+build.dart finished [804 ms]
+
+---
+build.dart --machine --changed=web/monitorapp.html
+[{"method":"mapping","params":{"from":"web/monitorapp.html","to":"web/out/monitorapp.html"}}]
+[{"method":"warning","params":{"file":"web/monitorapp.html","message":"Expected closing tag. Got '>' instead. Ignoring '</>'.","line":11,"charStart":302,"charEnd":305}}]
+[{"method":"error","params":{"file":"web/monitorapp.html","message":"The file Instance of 'UrlInfo' cannot be processed. All processed files must be under the base folder (web), you can specify the base folder using the --basedir flag.","line":12,"charStart":310,"charEnd":365}}]
+[{"method":"error","params":{"file":"web/monitorapp.html","message":"The file Instance of 'UrlInfo' cannot be processed. All processed files must be under the base folder (web), you can specify the base folder using the --basedir flag.","line":13,"charStart":370,"charEnd":438}}]
+[{"method":"error","params":{"file":"web/monitorapp.html","message":"The file Instance of 'UrlInfo' cannot be processed. All processed files must be under the base folder (web), you can specify the base folder using the --basedir flag.","line":14,"charStart":443,"charEnd":522}}]
+Total time spent on web/monitorapp.html                      -- 270 ms
+Total time                                                   -- 305 ms
+build.dart finished [802 ms]
+
+---
+build.dart --machine --changed=web/monitorapp.html
+[{"method":"mapping","params":{"from":"web/monitorapp.html","to":"web/out/monitorapp.html"}}]
+[{"method":"error","params":{"file":"web/monitorapp.html","message":"The file Instance of 'UrlInfo' cannot be processed. All processed files must be under the base folder (web), you can specify the base folder using the --basedir flag.","line":11,"charStart":296,"charEnd":351}}]
+[{"method":"error","params":{"file":"web/monitorapp.html","message":"The file Instance of 'UrlInfo' cannot be processed. All processed files must be under the base folder (web), you can specify the base folder using the --basedir flag.","line":12,"charStart":356,"charEnd":424}}]
+[{"method":"error","params":{"file":"web/monitorapp.html","message":"The file Instance of 'UrlInfo' cannot be processed. All processed files must be under the base folder (web), you can specify the base folder using the --basedir flag.","line":13,"charStart":429,"charEnd":508}}]
+Total time spent on web/monitorapp.html                      -- 290 ms
+Total time                                                   -- 324 ms
+build.dart finished [824 ms]
+
+---
+build.dart --machine --changed=web/monitorapp.html
+[{"method":"mapping","params":{"from":"web/monitorapp.html","to":"web/out/monitorapp.html"}}]
+[{"method":"error","params":{"file":"web/monitorapp.html","message":"The file Instance of 'UrlInfo' cannot be processed. All processed files must be under the base folder (web), you can specify the base folder using the --basedir flag.","line":11,"charStart":296,"charEnd":351}}]
+[{"method":"error","params":{"file":"web/monitorapp.html","message":"The file Instance of 'UrlInfo' cannot be processed. All processed files must be under the base folder (web), you can specify the base folder using the --basedir flag.","line":12,"charStart":356,"charEnd":424}}]
+[{"method":"error","params":{"file":"web/monitorapp.html","message":"The file Instance of 'UrlInfo' cannot be processed. All processed files must be under the base folder (web), you can specify the base folder using the --basedir flag.","line":13,"charStart":429,"charEnd":508}}]
+Total time spent on web/monitorapp.html                      -- 324 ms
+Total time                                                   -- 354 ms
+build.dart finished [822 ms]
+
+---
+build.dart --machine --changed=web/monitorapp.html
+[{"method":"mapping","params":{"from":"web/monitorapp.html","to":"web/out/monitorapp.html"}}]
+[{"method":"warning","params":{"file":null,"message":"expected }, but found *","line":12,"charStart":248,"charEnd":249}}]
+[{"method":"warning","params":{"file":null,"message":"parsing error expected {","line":12,"charStart":255,"charEnd":256}}]
+[{"method":"warning","params":{"file":null,"message":"expected }, but found *","line":60,"charStart":841,"charEnd":842}}]
+[{"method":"warning","params":{"file":null,"message":"expected {, but found ;","line":60,"charStart":857,"charEnd":858}}]
+[{"method":"warning","params":{"file":null,"message":"expected }, but found *","line":61,"charStart":861,"charEnd":862}}]
+[{"method":"warning","params":{"file":null,"message":"parsing error expected {","line":61,"charStart":868,"charEnd":869}}]
+[{"method":"warning","params":{"file":null,"message":"parsing error expected }","line":102,"charStart":1335,"charEnd":1336}}]
+[{"method":"warning","params":{"file":null,"message":"premature end of file unknown CSS","line":102,"charStart":1336,"charEnd":1337}}]
+[{"method":"warning","params":{"file":null,"message":"expected }, but found *","line":12,"charStart":259,"charEnd":260}}]
+[{"method":"warning","params":{"file":null,"message":"parsing error expected {","line":12,"charStart":266,"charEnd":267}}]
+[{"method":"warning","params":{"file":null,"message":"premature end of file unknown CSS","line":43,"charStart":711,"charEnd":712}}]
+Total time spent on web/monitorapp.html                      -- 430 ms
+Total time                                                   -- 459 ms
+build.dart finished [957 ms]
+
+---
+build.dart --machine --changed=web/out/monitorapp.dart --changed=web/out/monitorapp.dart.map --changed=web/out/...
+Total time                                                   --  27 ms
+build.dart finished [579 ms]
+
+---
+build.dart --machine --removed=web/out/monitorapp.dart --removed=web/out/monitorapp.dart.map --removed=web/out/...
+Total time                                                   --  21 ms
+build.dart finished [412 ms]
+
+---
+build.dart --machine --removed=web/out/public/bootstrap/css/bootstrap-responsive.css --removed=web/out/public/b...
+Total time                                                   --  21 ms
+build.dart finished [419 ms]
+
+---
+build.dart --machine --changed=web/out/monitorapp.dart --changed=web/out/monitorapp.dart.map --changed=web/out/...
+Total time                                                   --  34 ms
+build.dart finished [535 ms]
+
+---
+build.dart --machine --changed=web/out/monitorapp.html_bootstrap.dart.js --changed=web/out/monitorapp.html_boot...
+Total time                                                   --  29 ms
+build.dart finished [557 ms]
+
