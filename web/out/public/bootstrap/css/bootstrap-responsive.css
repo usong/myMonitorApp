@@ -2,8 +2,7 @@
 /* DO NOT EDIT. */
 
 .clearfix {
-}
-zoom: {
+  *zoom: 1;
 }
 .clearfix:before, .clearfix:after {
   display: table;

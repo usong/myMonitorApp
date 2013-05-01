@@ -68,4 +68,8 @@ body {
   -moz-opacity: 1;
   -webkit-opacity: 1;
 }
+.custom-width-modal {
+  width: 900px;
+  margin: -250px 0 0 -450px;
+}
 

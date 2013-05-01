@@ -1,7 +1,9 @@
 part of monitorapp;
 
 
-class Hostnode{// extends WebComponent {
+
+
+class Hostnode {
   
   /*   host info parameter */
   String m_ip;
@@ -74,6 +76,39 @@ class Hostnode{// extends WebComponent {
       //query("#closeicon$m_ip").children.add(element);
       query("#imgclose$m_ip").attributes['style']='display:none ;width: 18px; height: 18px';
     }    
+  }
+  void requesturl(var url){
+    
+      HttpRequest request = new HttpRequest(); 
+      request.onReadyStateChange.listen((_) {
+        if (request.readyState == HttpRequest.DONE &&
+            (request.status == 200 || request.status == 0)) {
+          // data saved OK.
+          print(request.responseText);
+          
+          query("#alert_tip").text= "获取主机成功!";
+          
+          query("#alert_tip").attributes['style']="display:block";
+          query("#status_submit").text="增加此节点";
+          
+          //window.location.replace('http://127.0.0.1:5000');
+          //print(request.responseText); // output the response from the server
+        }else{
+          print('zzzzzzzzzz');
+        }
+      });
+      request.open("POST", url, async: true);
+      var mapData = new Map();
+      mapData["ip"] = 'zcccc';
+      mapData["port"] = '1111';
+      mapData["alias"] = '1111';
+      //mapData["port"] = query("#nodeport").text;
+      //mapData["alias"] = query("#nodealias").text;
+      String jsonData = stringify(mapData); 
+      print(jsonData);
+      //request.setRequestHeader('Content-Type', 'application/json');
+      request.send(jsonData); 
+      
   }
   
 }
